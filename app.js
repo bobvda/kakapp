@@ -37,13 +37,16 @@ app.get('/detail', function(req,res){
 // app luisteren naar applicatiepoort
 app.listen(port);
 
+//test of server draait
 console.log("De server draait")
 
+//databank linken
 request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek1/MapServer/8/query?where=1%3D1&outFields=TYPE,STADSEIGENDOM,BETALEND,STRAAT,HUISNUMMER,POSTCODE,DOELGROEP,INTEGRAAL_TOEGANKELIJK,LUIERTAFEL,OPENINGSUREN_OPM,X_COORD,Y_COORD,OMSCHRIJVING,ID,CATEGORIE,DISTRICT,CONTACTPERSOON&outSR=4326&f=json',
 function(error, response, body){ //MapServer/636/query?where=1%3D1&outFields=id,naam,straat,huisnummer,postcode&outSR=4326&f=json'
   var data_toiletten = JSON.parse(body);
   console.log("Databank connected!")
 
+  //testen
   //for (var i = 0; i < data_toiletten.features.length; i++){
     //console.log("naam: " + data_toiletten.features[i].attributes.naam);
     //console.log("coord: " + data_toiletten.features[i].geometry.x + ", " + data.features[i].geometry.y);
