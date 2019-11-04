@@ -12,9 +12,6 @@ if (port == null || port == ""){
 }
 app.listen('port');
 
-// applicatiepoort instellen
-const port = 3000;
-
 // EJS configureren
 app.set('view engine', 'ejs');
 app.set('views',  path.resolve(__dirname, 'views'));
