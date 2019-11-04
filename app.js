@@ -6,6 +6,12 @@ const request = require('request');
 // bibliotheek inladen om paden naar folder te maken
 const path = require('path');
 
+let port = process.env.PORT;
+if (port == null || port == ""){
+	port = 3000;
+}
+app.listen('port');
+
 // applicatiepoort instellen
 const port = 3000;
 
