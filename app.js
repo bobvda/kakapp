@@ -10,7 +10,7 @@ let port = process.env.PORT;
 if (port == null || port == ""){
 	port = 3000;
 }
-app.listen('port');
+app.listen(port);
 
 // EJS configureren
 app.set('view engine', 'ejs');
@@ -36,9 +36,6 @@ app.get('/overzicht', function(req,res){
 app.get('/detail', function(req,res){
   res.render('detail');
 });
-
-// app luisteren naar applicatiepoort
-app.listen(port);
 
 //test of server draait
 console.log("De server draait")

@@ -1,7 +1,7 @@
 /*
  * map initialiseren
  */
-var mymap = L.mapid('mapje', { // gebruik id "map" in HTML
+var mymap = L.mapid('mapid', { // gebruik id "map" in HTML
   center: [51.505, -0.09], // middelpunt van map
   zoom: 14 // schaal van de map
 });
