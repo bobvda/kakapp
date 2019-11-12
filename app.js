@@ -22,6 +22,7 @@ app.set('views',  path.resolve(__dirname, 'views'));
 // statische files toelaten in 'public-folder'
 app.use(express.static('public'));
 
+
 // route naar "homepagina" laten werken
 app.get('/', function(req,res){
   res.render('home');

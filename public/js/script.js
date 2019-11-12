@@ -1,58 +1,46 @@
 /*
- * map initialiseren
+ *locatie gebruiker bepalen
  */
-var mymap = L.map('mapid', { // gebruik id "map" in HTML
-  center: [51.505, -0.09], // middelpunt van map
-  zoom: 14 // schaal van de map
-});
+navigator.geolocation.getCurrentPosition(function(location) {
+var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
 
 /*
- * map activeren door een achtergrond toe te voegen
+ *initiaisatie
  */
-var basicmap = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-	id: 'mapbox.streets'
-});
 
-/*
- * topografische kaart initialiseren
- */
- var topomap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-	maxZoom: 17,
-	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-});
+var mymap = L.map("mapid").setView([51.219496, 4.401636], 18); //coordinates + zoom 
 
-/*
- * bikemap initialiseren
- */
-var bikemap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}', {
+
+// activering
+
+var basicmap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}', {
 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	id: 'mapbox.streets',
 	apikey: '9ca3811048a94fedb11d6c701bde8bc3',
 	maxZoom: 22
+}).addTo(mymap);
+
+
+// Custom icon aanmaken
+
+var LeafIcon = L.Icon.extend({
+    options: {
+        iconSize:     [40,40],
+        iconAnchor:   [20,20],
+        popupAnchor:  [0,-20],
+    }
 });
 
-var marker = L.marker([51.520387, -0.123253]);
+var greenIcon = new LeafIcon({iconUrl: 'tentGreen.png'}),
+    blueIcon = new LeafIcon({iconUrl: 'tentBlue.png'}),
+    orangeIcon = new LeafIcon({iconUrl: 'tentOrange.png'});
 
-var circle = L.circle([51.508, -0.11], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
+
+
+// HANGOUTS
+var hangOutOne = L.marker([51.2016242,4.458387799999969], {icon: greenIcon}).addTo(mymap).bindPopup("Bij Flor en Kaat."); //Flor en Kaat in Deurne
+var hangOutTwo = L.marker([51.2171919,4.421446100000026], {icon: blueIcon}).addTo(mymap).bindPopup("Op de trein."); //Centraal Station
+var hangOutThree = L.marker([51.22789390000001,4.405467499999986], {icon: orangeIcon}).addTo(mymap).bindPopup("Story Urban Deli Shop");
+var marker = L.marker(latlng).addTo(mymap).bindPopup("U bevindt zich hier");
+
 });
-
-var polygon = L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-]);
-
-basicmap.addTo(mymap);
-marker.addTo(mymap);
-circle.addTo(mymap);
-polygon.addTo(mymap);
-
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-circle.bindPopup("I am a circle.");
-polygon.bindPopup("I am a polygon.");
-
-mymap.fitWorld();
-mymap.locate({setView: true, maxZoom: 16});
