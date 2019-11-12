@@ -8,11 +8,8 @@ var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
  *initiaisatie
  */
 
-var mymap = L.map("mapid").setView([51.219496, 4.401636], 18); //coordinates + zoom 
-
-
+var mymap = L.map("mapid").setView([51.219496, 4.401636], 18); //coordinates + zoom
 // activering
-
 var basicmap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}', {
 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 	id: 'mapbox.streets',
