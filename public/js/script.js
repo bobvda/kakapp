@@ -43,6 +43,10 @@ var hangOutTwo = L.marker([51.2171919,4.421446100000026], {icon: toiletIcon}).ad
 var hangOutThree = L.marker([51.22789390000001,4.405467499999986], {icon: toiletIcon}).addTo(mymap).bindPopup("Aanklikbare link");
 var marker = L.marker(latlng).addTo(mymap).bindPopup("Huidige locatie");
 
-// Hier moet een functie komen die locaties uit de databank haalt en daar icoontjes plaatst.
+//testen
+//for (var i = 0; i < data_toiletten.features.length; i++){
+//console.log("naam: " + data_toiletten.features[i].attributes.naam);
+//console.log("coord: " + data_toiletten.features[i].geometry.x + ", " + data.features[i].geometry.y);
+//}
 
 });
