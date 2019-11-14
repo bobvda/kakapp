@@ -39,7 +39,7 @@ app.get('/detail', function(req,res){
 });
 
 //test of server draait
-console.log("De server draait")
+console.log("De server draait op poort: "+port);
 
 //var aanmaken global scope
 var data_toiletten;
