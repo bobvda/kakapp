@@ -52,7 +52,6 @@ function(error, response, body){ //MapServer/636/query?where=1%3D1&outFields=id,
 	/*for(var i=0; i < data_toiletten.features.length; i++) {
 			console.log("naam: " + data_toiletten.features[i].attributes.naam);
 			console.log("coord: " + data_toiletten.features[i].geometry.x + ", " + data.features[i].geometry.y);
-			console.log("");
 			console.log(data_toiletten.features[i].attributes); */
 }
 );
