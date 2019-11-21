@@ -5,6 +5,7 @@
 
 body {
 	margin: 0;
+	font-family: Roboto;
 }
 
 header {
@@ -19,7 +20,15 @@ color: #FFFBD7;
 text-align: center;
 padding: .5em;
 }
-
 footer {
+	margin-top: 0;
 	height: 12vh;
+	background-color: #A13A00;
+
+
+}
+
+h2 {
+	margin: 0;
+	color: white;
 }
