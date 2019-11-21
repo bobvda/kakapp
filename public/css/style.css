@@ -4,7 +4,12 @@
 }
 
 body {
+<<<<<<< HEAD
     margin: 0;
+=======
+	margin: 0;
+	font-family: Roboto;
+>>>>>>> 779b73033b6777736bb11f4db3a064080a6a5cef
 }
 
 header {
@@ -19,7 +24,25 @@ header h1 {
     text-align: center;
     padding: .5em;
 }
-
 footer {
+<<<<<<< HEAD
     height: 12vh;
 }
+=======
+	margin-top: 0;
+	height: 12vh;
+	background-color: #045453;
+
+
+}
+
+h2 {
+	margin: 0;
+	color: white;
+}
+
+.leaflet-popup-content {
+	font-weight: 700;
+	font-size: 2em;
+}
+>>>>>>> 779b73033b6777736bb11f4db3a064080a6a5cef
