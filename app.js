@@ -25,7 +25,9 @@ app.use(express.static('public'));
 
 // route naar "homepagina" laten werken
 app.get('/', function(req,res){
-  res.render('home');
+  res.render('home', {
+		data: data
+	});
 });
 
 // route naar "overzicht" laten werken
@@ -42,7 +44,7 @@ app.get('/detail', function(req,res){
 console.log("De server draait op poort: "+port);
 
 //var aanmaken global scope
-var data_toiletten;
+var data;
 
 //databank linken
 request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek1/MapServer/8/query?where=1%3D1&outFields=TYPE,STADSEIGENDOM,BETALEND,STRAAT,HUISNUMMER,POSTCODE,DOELGROEP,INTEGRAAL_TOEGANKELIJK,LUIERTAFEL,OPENINGSUREN_OPM,X_COORD,Y_COORD,OMSCHRIJVING,ID,CATEGORIE,DISTRICT,CONTACTPERSOON&outSR=4326&f=json',

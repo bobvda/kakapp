@@ -7,8 +7,8 @@
 <script src="/./js/script.js"></script>
 <script>
 <% for ( var i=0; i < data.features.length; i++ ) {%>
-   L.marker( [<%=data.features[i].geometry.x%>, <%=data.features[i].geometry.y%>] )
-      .bindPopup( '<a href="' + <%=data.features[i].attributes.naam%> + '" target="_blank">' + <%=data.features[i].attributes.huisnummer%> + '</a>' )
+   L.marker( [<%=data.features[i].geometry.y%>, <%=data.features[i].geometry.x%>] )
+      .bindPopup( 'test' )
       .addTo(mymap);
 <% }%>
 
