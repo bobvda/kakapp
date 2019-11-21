@@ -4,22 +4,22 @@
 }
 
 body {
-	margin: 0;
+    margin: 0;
 }
 
 header {
-	height: 8vh;
-	background-color: #045453;
+    height: 8vh;
+    background-color: #045453;
 }
 
 header h1 {
-	margin:0;
-font-family: Turret Road;
-color: #FFFBD7;
-text-align: center;
-padding: .5em;
+    margin: 0;
+    font-family: Turret Road;
+    color: #FFFBD7;
+    text-align: center;
+    padding: .5em;
 }
 
 footer {
-	height: 12vh;
+    height: 12vh;
 }

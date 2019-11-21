@@ -39,7 +39,7 @@ var LeafIcon = L.Icon.extend({
 
 // Afbeelding linken aan custom item
 
-//var toiletIcon = new LeafIcon({iconUrl: '/./leaflet/toiletIcon.png'});
+var toiletIcon = new LeafIcon({iconUrl: '/./leaflet/toiletIcon.png'});
 
 // WC iconen ter voorbeeld
 
