@@ -47,7 +47,7 @@ var data_toiletten;
 //databank linken
 request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek1/MapServer/8/query?where=1%3D1&outFields=TYPE,STADSEIGENDOM,BETALEND,STRAAT,HUISNUMMER,POSTCODE,DOELGROEP,INTEGRAAL_TOEGANKELIJK,LUIERTAFEL,OPENINGSUREN_OPM,X_COORD,Y_COORD,OMSCHRIJVING,ID,CATEGORIE,DISTRICT,CONTACTPERSOON&outSR=4326&f=json',
 function(error, response, body){ //MapServer/636/query?where=1%3D1&outFields=id,naam,straat,huisnummer,postcode&outSR=4326&f=json'
-  data_toiletten = JSON.parse(body);
+  data = JSON.parse(body);
   console.log("Databank connected!")
 	/*for(var i=0; i < data_toiletten.features.length; i++) {
 			console.log("naam: " + data_toiletten.features[i].attributes.naam);
