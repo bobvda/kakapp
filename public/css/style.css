@@ -1,4 +1,24 @@
 #mapid {
-    height: 100vh;
+    height: 80vh;
     width: 100vw
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	height: 8vh;
+	background-color: #045453;
+}
+
+header h1 {
+font-family: Turret Road;
+color: #FFFBD7;
+text-align: center;
+padding: .5em;
+}
+
+footer {
+	height: 12vh;
 }
