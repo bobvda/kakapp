@@ -13,6 +13,7 @@ header {
 }
 
 header h1 {
+	margin:0;
 font-family: Turret Road;
 color: #FFFBD7;
 text-align: center;
