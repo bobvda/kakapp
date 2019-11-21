@@ -5,4 +5,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
 
 <script src="/./js/script.js"></script>
+<script>
+<% for ( var i=0; i < data.features.length; i++ ) {%>
+   L.marker( [<%=data.features[i].geometry.y%>, <%=data.features[i].geometry.x%>] )
+      .bindPopup( 'test' )
+      .addTo(mymap);
+<% }%>
+
+
+</script>
 <%include footer%>
