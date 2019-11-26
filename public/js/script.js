@@ -9,14 +9,34 @@ var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
  *initiaisatie
  */
 
+//openen op vaste locatie met wereld map
+var mymap = L.map("mapid").fitWorld();
+//coordinates + zoom
+
 //openen op vaste locatie
-//var mymap = L.map("mapid").setView([51.219496, 4.401636], 18); //coordinates + zoom
+//var mymap = L.map("mapid").setView([51.219496, 4.401636], 18);
+ //coordinates + zoom
 
 //openen op huidige locatie
-var mymap = L.map("mapid").setView([51.219496, 4.401636], 18); //coordinates + zoom
+mymap.locate({setView: true, maxZoom: 18});
 
+function onLocationFound(e) {
+    var radius = e.accuracy;
 
+    L.marker(e.latlng).addTo(mymap)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
 
+    L.circle(e.latlng, radius).addTo(mymap);
+}
+
+mymap.on('locationfound', onLocationFound);
+
+//error als geolocatie is mislukt
+function onLocationError(e) {
+    alert(e.message);
+}
+
+mymap.on('locationerror', onLocationError);
 
 // activering
 var basicmap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}', {
@@ -29,6 +49,7 @@ var basicmap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}
 // Custom icon aanmaken
 
 var LeafIcon = L.Icon.extend({
+	iconUrl: 'toiletIcon.png',
     options: {
         iconSize:     [150,150],
         iconAnchor:   [25,25],
@@ -38,7 +59,7 @@ var LeafIcon = L.Icon.extend({
 
 // Afbeelding linken aan custom item
 
-var toiletIcon = new LeafIcon({iconUrl: '/./leaflet/toiletIcon.png'});
+var toiletIcon = new LeafIcon({iconUrl: '/./leaflet/images/toiletIcon.png'});
 
 // WC iconen ter voorbeeld
 
