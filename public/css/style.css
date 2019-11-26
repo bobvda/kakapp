@@ -4,12 +4,8 @@
 }
 
 body {
-<<<<<<< HEAD
-    margin: 0;
-=======
 	margin: 0;
 	font-family: Roboto;
->>>>>>> 779b73033b6777736bb11f4db3a064080a6a5cef
 }
 
 header {
@@ -25,16 +21,9 @@ header h1 {
     padding: .5em;
 }
 footer {
-<<<<<<< HEAD
     height: 12vh;
 }
-=======
-	margin-top: 0;
-	height: 12vh;
-	background-color: #045453;
 
-
-}
 
 h2 {
 	margin: 0;
@@ -44,10 +33,10 @@ h2 {
 .leaflet-popup-content {
 	font-weight: 700;
 	font-size: 2em;
-<<<<<<< HEAD
 	color: #045453;
 }
-=======
+
+.ui-menu {
+    width: 150px;
 }
->>>>>>> 779b73033b6777736bb11f4db3a064080a6a5cef
->>>>>>> c93975b5c0c8980f792749b934490593e417b9cf
+
