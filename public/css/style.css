@@ -4,23 +4,31 @@
 }
 
 body {
+<<<<<<< HEAD
+    margin: 0;
+=======
 	margin: 0;
 	font-family: Roboto;
+>>>>>>> 779b73033b6777736bb11f4db3a064080a6a5cef
 }
 
 header {
-	height: 8vh;
-	background-color: #045453;
+    height: 8vh;
+    background-color: #045453;
 }
 
 header h1 {
-	margin:0;
-font-family: Turret Road;
-color: #FFFBD7;
-text-align: center;
-padding: .5em;
+    margin: 0;
+    font-family: Turret Road;
+    color: #FFFBD7;
+    text-align: center;
+    padding: .5em;
 }
 footer {
+<<<<<<< HEAD
+    height: 12vh;
+}
+=======
 	margin-top: 0;
 	height: 12vh;
 	background-color: #045453;
@@ -36,5 +44,10 @@ h2 {
 .leaflet-popup-content {
 	font-weight: 700;
 	font-size: 2em;
+<<<<<<< HEAD
 	color: #045453;
 }
+=======
+}
+>>>>>>> 779b73033b6777736bb11f4db3a064080a6a5cef
+>>>>>>> c93975b5c0c8980f792749b934490593e417b9cf

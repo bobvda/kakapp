@@ -26,12 +26,11 @@ var basicmap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}
 	maxZoom: 22
 }).addTo(mymap);
 
-
 // Custom icon aanmaken
 
 var LeafIcon = L.Icon.extend({
     options: {
-        iconSize:     [50,50],
+        iconSize:     [150,150],
         iconAnchor:   [25,25],
         popupAnchor:  [0,-25],
     }
@@ -39,7 +38,7 @@ var LeafIcon = L.Icon.extend({
 
 // Afbeelding linken aan custom item
 
-//var toiletIcon = new LeafIcon({iconUrl: '/./leaflet/toiletIcon.png'});
+var toiletIcon = new LeafIcon({iconUrl: '/./leaflet/toiletIcon.png'});
 
 // WC iconen ter voorbeeld
 
