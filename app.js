@@ -1,3 +1,5 @@
+//KAKAPP
+
 // Express toevoegen aan Node.js
 const express = require('express');
 const app = express();
@@ -26,18 +28,24 @@ app.use(express.static('public'));
 // route naar "homepagina" laten werken
 app.get('/', function(req,res){
   res.render('home', {
-		data: data
+		data: data;
 	});
 });
 
 // route naar "overzicht" laten werken
 app.get('/overzicht', function(req,res){
-  res.render('overzicht');
+  res.render('overzicht', {
+		data: data;
+	});
 });
 
 // route naar "detailpagina" laten werken
-app.get('/detail', function(req,res){
-  res.render('detail');
+app.get('/detail/:postid', function(req,res){
+  res.render('detail', {
+		post: blogposts.blog[req.params.postid],
+    postId: req.params.postid, //wat is het ID van de post die ik nu aan het bekijken ben
+    lastPostId: blogposts.blog.length-1 //hoeveel blogposts heb ik in totaal? (-1 want we beginnen tellen bij 0)
+	});
 });
 
 //test of server draait
@@ -58,3 +66,8 @@ function(error, response, body){ //MapServer/636/query?where=1%3D1&outFields=id,
 			console.log(data_toiletten.features[i].attributes); */
 }
 );
+
+//heroku: in app.js poort variable
+//        in package.json: start: wat moet er opstarten als app wordt geladen in heroku?
+
+//ericitation(?)
