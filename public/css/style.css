@@ -4,8 +4,8 @@
 }
 
 body {
-	margin: 0;
-	font-family: Roboto;
+    margin: 0;
+    font-family: Roboto;
 }
 
 header {
@@ -20,23 +20,41 @@ header h1 {
     text-align: center;
     padding: .5em;
 }
+
 footer {
     height: 12vh;
 }
 
-
 h2 {
-	margin: 0;
-	color: white;
+    margin: 0;
+    color: white;
 }
 
 .leaflet-popup-content {
-	font-weight: 700;
-	font-size: 2em;
-	color: #045453;
+    font-weight: 700;
+    font-size: 2em;
+    color: #045453;
 }
 
 .ui-menu {
     width: 150px;
 }
 
+.overzichtslijst {
+    border: 1px solid black;
+    padding: 30px;
+    font-size: 3em;
+}
+
+.fullink {
+    text-decoration: none;
+    color: black;
+}
+
+.ol {
+    color: black;
+}
+
+.overviewtitle {
+    color: black;
+}

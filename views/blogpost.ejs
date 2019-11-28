@@ -1,7 +1,11 @@
-<article>
+<article class="overzichtslijst">
 
-  <span><%=post.attributes.TYPE %></span>
-  <span><%=post.attributes.STRAAT%></span>
-  <span><%=post.attributes.HUISNUMMER%></span>
+<a class="fulllink" href="/blog/<%=postIndex %>">
+
+  <span class="ol"><%=post.attributes.TYPE %></span><br>
+  <span class="ol"><%=post.attributes.STRAAT%></span><br>
+  <span class="ol"><%=post.attributes.HUISNUMMER%></span><br>
+
+  </a>
 
 </article>

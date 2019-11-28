@@ -9,9 +9,9 @@
 <script src="/./js/script.js"></script>
 <script>
 
-<% for ( var i=0; i < data.features.length; i++ ) {%>
-   L.marker( [<%=data.features[i].geometry.y%>, <%=data.features[i].geometry.x%>] )
-    .bindPopup( "<%=data.features[i].attributes.TYPE%>" + "<br>" + "<%=data.features[i].attributes.OMSCHRIJVING%>" )
+<% for ( var i=0; i < data.length; i++ ) {%>
+   L.marker( [<%=data[i].geometry.y%>, <%=data[i].geometry.x%>] )
+    .bindPopup( "<%=data[i].attributes.TYPE%>" + "<br>" + "<%=data[i].attributes.OMSCHRIJVING%>" )
   //  .bindPopup( '<a href="' + data.features[i].attributes.straatnaam + '" target="_blank">' + data.features[i].attributes.huisnummer + '</a>' )
       .addTo(mymap);
 <% }%>
