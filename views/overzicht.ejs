@@ -1,0 +1,14 @@
+<%include header%>
+
+  <%
+  var blogLength = data.length;
+  for(var postIndex=0; postIndex<blogLength; postIndex++) {
+  %>
+  <section>
+    <% var post = data[postIndex] %>
+    <% include blogpost %>
+  </section>
+  <%
+  }
+  %>
+<% include footer %>
