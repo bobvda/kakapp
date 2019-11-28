@@ -1,8 +1,8 @@
 <% include header %>
 <!--div voor leaflet-map-->
 <div id="mapid"></div>
-<ul id="menu"></ul>
-
+<ul class="lijst">
+</ul>
 <!--Leaflet JavaScript file-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
 
@@ -15,9 +15,9 @@
   //  .bindPopup( '<a href="' + data.features[i].attributes.straatnaam + '" target="_blank">' + data.features[i].attributes.huisnummer + '</a>' )
       .addTo(mymap);
 <% }%>
-
-
-
 </script>
+
+
+
 
 <%include footer%>
