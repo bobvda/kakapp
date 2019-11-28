@@ -1,21 +1,9 @@
-/*
- *locatie gebruiker bepalen
 
-navigator.geolocation.getCurrentPosition(function(location) {
-var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
- */
-
-/*
- *initiaisatie
- */
-
-//openen op vaste locatie met wereld map
+//openen map
 var mymap = L.map("mapid").fitWorld();
 //coordinates + zoom
 
-//openen op vaste locatie
-//var mymap = L.map("mapid").setView([51.219496, 4.401636], 18);
- //coordinates + zoom
+
 
 //openen op huidige locatie
 mymap.locate({setView: true, maxZoom: 18});
@@ -39,7 +27,7 @@ function onLocationError(e) {
 mymap.on('locationerror', onLocationError);
 
 // activering
-var basicmap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}', {
+var basicmap = L.tileLayer('https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey={apikey}', {
 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 	id: 'mapbox.streets',
 	apikey: '9ca3811048a94fedb11d6c701bde8bc3',
