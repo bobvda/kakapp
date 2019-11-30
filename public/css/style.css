@@ -1,6 +1,8 @@
 #mapid {
+  position: absolute;
+  z-index: -1;
     height: 80vh;
-    width: 100vw
+    width: 100vw;
 }
 
 body {
@@ -9,7 +11,7 @@ body {
 }
 
 header {
-    height: 8vh;
+    height: 10vh;
     background-color: #045453;
 }
 
@@ -22,7 +24,9 @@ header h1 {
 }
 
 footer {
-    height: 12vh;
+    height: 10vh;
+    position: absolute;
+  bottom: 0;
 }
 
 h2 {
@@ -40,8 +44,8 @@ h2 {
 
 .overzichtslijst {
     border: 1px solid black;
-    padding: 30px;
-    font-size: 3em;
+    padding: 2em;
+    font-size: 1em;
 }
 
 .fullink {
@@ -54,5 +58,42 @@ h2 {
 }
 
 .overviewtitle {
+  background-color: pink;
     color: black;
+    position: absolute;
+    right:0;
+z-index: 1;
+
+
+
 }
+
+
+.collapse {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; 
+  overflow-y:scroll;
+
+}
+
+.overzicht section {
+  display: none;
+
+
+}
+
+.overzicht section:target {
+  display: block;
+
+
+}
+
+
+
+
+
+
+
+
+
