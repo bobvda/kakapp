@@ -44,14 +44,14 @@ h2 {
 
 .overzichtslijst {
     border: 1px solid black;
-    padding: 2em;
+    padding: 1em;
     font-size: 1em;
 }
 
 .fullink {
     text-decoration: none;
     color: black;
-}
+  }
 
 .ol {
     color: black;
@@ -62,7 +62,7 @@ h2 {
     color: black;
     position: absolute;
     right:0;
-z-index: 1;
+z-index: 2;
 
 
 
@@ -71,10 +71,19 @@ z-index: 1;
 
 .collapse {
   width: 100vw;
-  height: 100vh;
+  height: 40vh;
   overflow: hidden; 
   overflow-y:scroll;
 
+}
+
+.show {
+height: 40vh;
+position: absolute;
+    right:0;
+z-index: 1;
+background-color: white;
+border-bottom: 10px solid #045453 ;
 }
 
 .overzicht section {
