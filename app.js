@@ -51,7 +51,6 @@ app.get('/detail/:postid', function(req,res){
 console.log("De server draait op poort: "+port);
 
 
-
 //databank linken
 request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek1/MapServer/8/query?where=1%3D1&outFields=TYPE,STADSEIGENDOM,BETALEND,STRAAT,HUISNUMMER,POSTCODE,DOELGROEP,INTEGRAAL_TOEGANKELIJK,LUIERTAFEL,OPENINGSUREN_OPM,X_COORD,Y_COORD,OMSCHRIJVING,ID,CATEGORIE,DISTRICT,CONTACTPERSOON&outSR=4326&f=json',
 function(error, response, body){ //MapServer/636/query?where=1%3D1&outFields=id,naam,straat,huisnummer,postcode&outSR=4326&f=json'
@@ -59,6 +58,7 @@ function(error, response, body){ //MapServer/636/query?where=1%3D1&outFields=id,
 	data = data.features;
 	console.log(data);
   console.log("Databank connected!")
+	console.log("Nodemon is online")
 }
 );
 
