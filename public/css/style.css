@@ -1,7 +1,7 @@
 #mapid {
   position: absolute;
   z-index: -1;
-    height: 80vh;
+    height: 89vh;
     width: 100vw;
 }
 
@@ -17,17 +17,15 @@ header {
 
 header h1 {
     margin: 0;
+    line-height: 30px;
+    height: 30px;
     font-family: Turret Road;
-    color: #FFFBD7;
+    color: #FFFBF4;
     text-align: center;
     padding: .5em;
 }
 
-footer {
-    height: 10vh;
-    position: absolute;
-  bottom: 0;
-}
+
 
 h2 {
     margin: 0;
@@ -58,10 +56,16 @@ h2 {
 }
 
 .overviewtitle {
-  background-color: pink;
-    color: black;
+  height: 80px;
+  width:80px;
+  border-radius: 100%;
+  font-size:25px;
+  background-color: #9e1015;
+    color: #FFFBF4;
     position: absolute;
     right:0;
+    top: 40px;
+    right: 10px;
 z-index: 2;
 
 
@@ -71,14 +75,14 @@ z-index: 2;
 
 .collapse {
   width: 100vw;
-  height: 40vh;
+  height: auto;
   overflow: hidden; 
   overflow-y:scroll;
 
 }
 
 .show {
-height: 40vh;
+height: auto;
 position: absolute;
     right:0;
 z-index: 1;
