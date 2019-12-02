@@ -1,6 +1,8 @@
 #mapid {
-    height: 80vh;
-    width: 100vw
+  position: absolute;
+  z-index: -1;
+    height: 89vh;
+    width: 100vw;
 }
 
 body {
@@ -9,21 +11,21 @@ body {
 }
 
 header {
-    height: 8vh;
+    height: 10vh;
     background-color: #045453;
 }
 
 header h1 {
     margin: 0;
+    line-height: 30px;
+    height: 30px;
     font-family: Turret Road;
-    color: #FFFBD7;
+    color: #FFFBF4;
     text-align: center;
     padding: .5em;
 }
 
-footer {
-    height: 12vh;
-}
+
 
 h2 {
     margin: 0;
@@ -40,19 +42,71 @@ h2 {
 
 .overzichtslijst {
     border: 1px solid black;
-    padding: 30px;
-    font-size: 3em;
+    padding: 1em;
+    font-size: 1em;
 }
 
 .fullink {
     text-decoration: none;
     color: black;
-}
+  }
 
 .ol {
     color: black;
 }
 
 .overviewtitle {
-    color: black;
+  height: 80px;
+  width:80px;
+  border-radius: 100%;
+  font-size:25px;
+  background-color: #9e1015;
+    color: #FFFBF4;
+    position: absolute;
+    right:0;
+    top: 40px;
+    right: 10px;
+z-index: 2;
+
+
+
 }
+
+
+.collapse {
+  width: 100vw;
+  height: auto;
+  overflow: hidden; 
+  overflow-y:scroll;
+
+}
+
+.show {
+height: auto;
+position: absolute;
+    right:0;
+z-index: 1;
+background-color: white;
+border-bottom: 10px solid #045453 ;
+}
+
+.overzicht section {
+  display: none;
+
+
+}
+
+.overzicht section:target {
+  display: block;
+
+
+}
+
+
+
+
+
+
+
+
+
