@@ -28,12 +28,22 @@
 <script src="/./js/script.js"></script>
 <script>
 
+//var blogLength = data.length;
+//for(var postIndex=0; postIndex<blogLength; postIndex++)
+
 <% for ( var i=0; i < data.length; i++ ) {%>
    L.marker( [<%=data[i].geometry.y%>, <%=data[i].geometry.x%>] )
-    .bindPopup( "<%=data[i].attributes.TYPE%>" + "<br>" + "<%=data[i].attributes.OMSCHRIJVING%>" )
-  //  .bindPopup( '<a href="' + data.features[i].attributes.straatnaam + '" target="_blank">' + data.features[i].attributes.huisnummer + '</a>' )
+// Link niet aanklikbaar
+//    .bindPopup( "<%=data[i].attributes.TYPE%>" + "<br>" + "<%=data[i].attributes.OMSCHRIJVING%>" )
+
+// Poging link aanklikbaar maken
+  .bindPopup( '<a href="/detail/<%=i%>"><%=data[i].attributes.TYPE%><br><%=data[i].attributes.OMSCHRIJVING%></a>')
+  //foutmelding bij aanklikken, geeft steeds data 124 maar die bestaat niet.
+
       .addTo(mymap);
 <% }%>
+
+
 
 
 

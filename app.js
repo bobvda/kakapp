@@ -24,6 +24,7 @@ app.use(express.static('public'));
 //var aanmaken global scope
 var data;
 
+
 // route naar "homepagina" laten werken
 app.get('/', function(req,res){
   res.render('home', {

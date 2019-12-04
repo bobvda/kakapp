@@ -1,6 +1,6 @@
 #mapid {
-  position: absolute;
-  z-index: -1;
+    position: absolute;
+    z-index: -1;
     height: 89vh;
     width: 100vw;
 }
@@ -25,8 +25,6 @@ header h1 {
     padding: .5em;
 }
 
-
-
 h2 {
     margin: 0;
     color: white;
@@ -38,8 +36,6 @@ h2 {
     color: #045453;
 }
 
-
-
 .overzichtslijst {
     border: 1px solid black;
     padding: 1em;
@@ -49,64 +45,56 @@ h2 {
 .fullink {
     text-decoration: none;
     color: black;
-  }
+}
 
 .ol {
     color: black;
 }
 
 .overviewtitle {
-  height: 80px;
-  width:80px;
-  border-radius: 100%;
-  font-size:25px;
-  background-color: #9e1015;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    font-size: 25px;
+    background-color: #9e1015;
     color: #FFFBF4;
     position: absolute;
-    right:0;
+    right: 0;
     top: 40px;
     right: 10px;
-z-index: 2;
-
-
-
+    z-index: 2;
 }
 
-
 .collapse {
-  width: 100vw;
-  height: auto;
-  overflow: hidden; 
-  overflow-y:scroll;
-
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-size: 1.8em;
+    line-height: 1.2em;
 }
 
 .show {
-height: auto;
-position: absolute;
-    right:0;
-z-index: 1;
-background-color: white;
-border-bottom: 10px solid #045453 ;
+    height: auto;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    border-bottom: 10px solid #045453;
 }
 
 .overzicht section {
-  display: none;
-
-
+    display: none;
 }
 
 .overzicht section:target {
-  display: block;
-
-
+    display: block;
 }
 
+.leaflet-container a {
+    text-decoration: none:
+}
 
-
-
-
-
-
-
-
+.leaflet-container a:hover {
+    text-decoration: none;
+}
