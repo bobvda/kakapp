@@ -42,7 +42,6 @@ app.get('/overzicht', function(req,res){
 // route naar "detailpagina" laten werken
 app.get('/detail/:postid', function(req,res){
   res.render('detail', {
-		data: data,
 		post: data[req.params.postid],
     postId: req.params.postid, //wat is het ID van de post die ik nu aan het bekijken ben
     lastPostId: data.length-1 //hoeveel blogposts heb ik in totaal? (-1 want we beginnen tellen bij 0)

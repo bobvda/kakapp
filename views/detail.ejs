@@ -1,6 +1,6 @@
 <%include header%>
 
-<div id="mapid" class="detailmap"></div>
+
 
 <article class="detail">
   <span class="ol">Type: <%=post.attributes.TYPE %></span><br>
@@ -12,15 +12,25 @@
   <button>Go</button>
 </article>
 
+<div id="mapid" class="detailmap"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
-<script src="/./js/script.js"></script>
+<!--<script src="/./js/script.js"></script>-->
+
+
 
 <script>
 
-var map = L.map('mapid').setView(< %= data.geometry.y % >, < %= data.geometry.x % >], 13);
-  L.marker([ < %= data.geometry.y % > , < %= data.geometry.x % > ])
-    .addTo(mymap);
+var map = L.map('mapid').setView([<%=post.geometry.y %>, <%=post.geometry.x %>], 13);
+  L.marker([ <%=post.geometry.y %> , <%=post.geometry.x %> ])
+    .addTo(map);
+
+var basicmap = L.tileLayer('https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey={apikey}', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	id: 'mapbox.streets',
+	apikey: '9ca3811048a94fedb11d6c701bde8bc3',
+	maxZoom: 20
+}).addTo(map);
 
 </script>
 
