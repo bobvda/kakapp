@@ -14,10 +14,10 @@ function onLocationFound(e) {
     L.marker(e.latlng).addTo(mymap)
         .bindPopup("You are within " + radius + " meters from this point").openPopup();
 
-    L.circle(e.latlng, radius).addTo(mymap);
-}
+     L.circle(e.latlng, radius).addTo(mymap);
+ }
 
-mymap.on('locationfound', onLocationFound);
+ mymap.on('locationfound', onLocationFound);
 
 //error als geolocatie is mislukt
 function onLocationError(e) {
@@ -34,6 +34,15 @@ var basicmap = L.tileLayer('https://tile.thunderforest.com/mobile-atlas/{z}/{x}/
 	maxZoom: 20
 }).addTo(mymap);
 
+// Routing toevoegen
+
+L.Routing.control({
+  waypoints: [
+    L.latLng(51.229940, 4.415600),
+    L.latLng(51.218754, 4.416905)
+  ]
+}).addTo(mymap);
+
 // Custom icon aanmaken
 
 var LeafIcon = L.Icon.extend({
@@ -48,3 +57,5 @@ var LeafIcon = L.Icon.extend({
 // Afbeelding linken aan custom item
 
 var toiletIcon = new LeafIcon({iconUrl: '/./leaflet/images/toiletIcon.png'});
+
+//routing
