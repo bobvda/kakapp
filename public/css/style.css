@@ -108,3 +108,10 @@ h2 {
 .leaflet-container a:hover {
     text-decoration: none;
 }
+
+.detailmap {
+    max-width: 100vw;
+    max-heigth: 40vh;
+    margin: auto;
+    margin-top: 30vh;
+}

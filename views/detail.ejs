@@ -1,14 +1,28 @@
 <%include header%>
 
+<div id="mapid" class="detailmap"></div>
+
 <article class="detail">
-
-
-  <span class="ol"><%=post.attributes.TYPE %></span><br>
-  <span class="ol"><%=post.attributes.STRAAT%></span><br>
-  <span class="ol"><%=post.attributes.HUISNUMMER%></span><br>
-
+  <span class="ol">Type: <%=post.attributes.TYPE %></span><br>
+  <span class="ol">Beschrijving: <%=post.attributes.OMSCHRIJVING%></span><br>
+  <span class="ol">Adres: <%=post.attributes.STRAAT%> <%=post.attributes.HUISNUMMER%></span><br>
+  <span class="ol"><%=post.attributes.DISTRICT%></span><br>
+  <span class="ol">Openingsuren: <%=post.attributes.OPENINGSUREN_OPM%></span><br>
+  <span class="ol">Gratis: <%=post.attributes.BETALEND%></span><br>
   <button>Go</button>
-
 </article>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
+<script src="/./js/script.js"></script>
+
+<script>
+
+var map = L.map('mapid').setView(< %= data.geometry.y % >, < %= data.geometry.x % >], 13);
+  L.marker([ < %= data.geometry.y % > , < %= data.geometry.x % > ])
+    .addTo(mymap);
+
+</script>
+
 
 <%include footer%>
