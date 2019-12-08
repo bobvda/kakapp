@@ -59,7 +59,6 @@ function(error, response, body){ //MapServer/636/query?where=1%3D1&outFields=id,
 	data = data.features;
 	console.log(data);
   console.log("Databank connected!")
-	console.log("Nodemon is online")
 }
 );
 

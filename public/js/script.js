@@ -1,11 +1,10 @@
 
 //openen map
+
 var mymap = L.map("mapid").fitWorld();
-//coordinates + zoom
-
-
 
 //openen op huidige locatie
+
 mymap.locate({setView: true, maxZoom: 17});
 
 function onLocationFound(e) {
@@ -20,6 +19,7 @@ function onLocationFound(e) {
  mymap.on('locationfound', onLocationFound);
 
 //error als geolocatie is mislukt
+
 function onLocationError(e) {
     alert(e.message);
 }
@@ -27,6 +27,7 @@ function onLocationError(e) {
 mymap.on('locationerror', onLocationError);
 
 // activering
+
 var basicmap = L.tileLayer('https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey={apikey}', {
 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 	id: 'mapbox.streets',
@@ -43,19 +44,46 @@ L.Routing.control({
   ]
 }).addTo(mymap);
 
-// Custom icon aanmaken
+/*
+// Isotope script
 
-var LeafIcon = L.Icon.extend({
-	iconUrl: 'toiletIcon.png',
-    options: {
-        iconSize:     [150,150],
-        iconAnchor:   [25,25],
-        popupAnchor:  [0,-25],
-    }
+var iso = new Isotope( '.collapse', {
+  itemSelector: '.overzichtslijst',
+  layoutMode: 'fitRows',
+  getSortData: {
+  }
 });
 
-// Afbeelding linken aan custom item
+*/
 
-var toiletIcon = new LeafIcon({iconUrl: '/./leaflet/images/toiletIcon.png'});
+var buttonGroups = document.querySelectorAll('.button-group');
+for ( var i=0; i < buttonGroups.length; i++ ) {
+  buttonGroups[i].addEventListener( 'click', onButtonGroupClick );
+}
 
-//routing
+function onButtonGroupClick( event ) {
+  // only button clicks
+  if ( !matchesSelector( event.target, '.button' ) ) {
+    return;
+  }
+  var button = event.target;
+  button.parentNode.querySelector('.is-checked').classList.remove('is-checked');
+  button.classList.add('is-checked');
+}
+
+/*
+
+//FILTERFUNCTIES
+
+// bind filter button click
+var filters = document.querySelector('.filter-by-button-group');
+filters.addEventListener( 'click', function( event ) {
+
+  // only work with buttons
+  if ( !matchesSelector( event.target, 'button' ) ) {
+    return;
+  }
+  var filterValue = event.target.getAttribute('data-filter');
+  iso.arrange({ filter: filterValue });
+});
+*/
