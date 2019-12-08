@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    height: 10vh;
+    height: 100px;
     background-color: #045453;
 }
 
@@ -46,15 +46,15 @@ h2 {
     color: #045453;
 }
 
+.fullink {
+    text-decoration: none;
+    color: black;
+}
+
 .overzichtslijst {
     border: 1px solid black;
     padding: 1em;
     font-size: 1em;
-}
-
-.fullink {
-    text-decoration: none;
-    color: black;
 }
 
 .ol {
@@ -99,14 +99,6 @@ h2 {
 
 .overzicht section:target {
     display: block;
-}
-
-.leaflet-container a {
-    text-decoration: none:
-}
-
-.leaflet-container a:hover {
-    text-decoration: none;
 }
 
 .detailmap {

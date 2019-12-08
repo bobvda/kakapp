@@ -28,25 +28,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
 <!--Routing script-->
 <script src="/./routing/leaflet-routing-machine.js"></script>
-
+<!--JavaScript file-->
 <script src="/./js/script.js"></script>
 
 
 <script>
 
-//var blogLength = data.length;
-//for(var postIndex=0; postIndex<blogLength; postIndex++)
+
+var LeafIcon = L.Icon.extend({
+    options: {
+        iconSize:     [60,60],
+        iconAnchor:   [30,30],
+        popupAnchor:  [0,-20],
+    }
+});
+
+var toiletIcon = new LeafIcon({iconUrl: 'toiletIcon.png'});
+
 
 <% for ( var i=0; i < data.length; i++ ) {%>
-   L.marker( [<%=data[i].geometry.y%>, <%=data[i].geometry.x%>] )
-// Link niet aanklikbaar
-//    .bindPopup( "<%=data[i].attributes.TYPE%>" + "<br>" + "<%=data[i].attributes.OMSCHRIJVING%>" )
-
-// Poging link aanklikbaar maken
-  .bindPopup( '<a href="/detail/<%=i%>"><%=data[i].attributes.TYPE%><br><%=data[i].attributes.OMSCHRIJVING%></a>')
-  //foutmelding bij aanklikken, geeft steeds data 124 maar die bestaat niet.
-
-      .addTo(mymap);
+   L.marker( [<%=data[i].geometry.y%>, <%=data[i].geometry.x%>], {icon: toiletIcon}).addTo(mymap).bindPopup( '<a href="/detail/<%=i%>"><%=data[i].attributes.TYPE%><br><%=data[i].attributes.OMSCHRIJVING%></a>');
 <% }%>
 
 
