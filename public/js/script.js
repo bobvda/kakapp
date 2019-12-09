@@ -47,6 +47,8 @@ L.Routing.control({
 
 // Isotope script
 
+
+
 var iso = new Isotope( '.collapse', {
   itemSelector: '.overzichtslijst',
   layoutMode: 'fitRows',
@@ -72,6 +74,7 @@ function onButtonGroupClick( event ) {
 
 
 
+
 //FILTERFUNCTIES
 
 // bind filter button click
@@ -85,3 +88,5 @@ filters.addEventListener( 'click', function( event ) {
   var filterValue = event.target.getAttribute('data-filter');
   iso.arrange({ filter: filterValue });
 });
+
+iso.layout();
