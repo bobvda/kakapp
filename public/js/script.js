@@ -89,4 +89,3 @@ filters.addEventListener( 'click', function( event ) {
   iso.arrange({ filter: filterValue });
 });
 
-iso.layout();
