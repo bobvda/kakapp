@@ -7,13 +7,13 @@
 <!--filteropties-->
   		<div class="button-group filter-by-button-group">
   			<button class="button is-checked" data-filter="*">Alle wc's</button>
-  			<button class="button" data-filter=".unisex_man/vrouw">man/vrouw</button>
-  			<button class="button" data-filter=".betalen_nee">betalend</button>
-  			<button class="button" data-filter=".toegang_ja">toegankelijk</button>
+  			<button class="button" data-filter=".unisex_man/vrouw">urinoirs</button>
+  			<button class="button" data-filter=".betalen_nee">gratis</button>
+  			<button class="button" data-filter=".toegang_nee">toegankelijk</button>
   		</div>
 
 <!--opbouwen deeloverzicht vanuit database-->
-
+<section>
   <%
   var blogLength = data.length;
   for(var postIndex=0; postIndex<blogLength; postIndex++) {
@@ -25,6 +25,7 @@
   <%
   }
   %>
+</section>
 </div>
 
 <!--div voor leaflet-map-->

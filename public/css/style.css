@@ -106,6 +106,10 @@ span.ol {
     border-bottom: 10px solid #045453;
 }
 
+section {
+    position: relative;
+}
+
 .overzicht section {
     display: none;
 }

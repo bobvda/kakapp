@@ -44,7 +44,7 @@ L.Routing.control({
   ]
 }).addTo(mymap);
 
-/*
+
 // Isotope script
 
 var iso = new Isotope( '.collapse', {
@@ -54,7 +54,6 @@ var iso = new Isotope( '.collapse', {
   }
 });
 
-*/
 
 var buttonGroups = document.querySelectorAll('.button-group');
 for ( var i=0; i < buttonGroups.length; i++ ) {
@@ -71,7 +70,7 @@ function onButtonGroupClick( event ) {
   button.classList.add('is-checked');
 }
 
-/*
+
 
 //FILTERFUNCTIES
 
@@ -86,4 +85,3 @@ filters.addEventListener( 'click', function( event ) {
   var filterValue = event.target.getAttribute('data-filter');
   iso.arrange({ filter: filterValue });
 });
-*/
