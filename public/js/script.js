@@ -44,7 +44,7 @@ L.Routing.control({
   ],
     lineOptions: {styles: [{color: '#9e1015'}]},
 
-    routeWhileDragging: true
+    routeWhileDragging: true,
 }).addTo(mymap);
 
 
@@ -91,4 +91,3 @@ filters.addEventListener( 'click', function( event ) {
   var filterValue = event.target.getAttribute('data-filter');
   iso.arrange({ filter: filterValue });
 });
-

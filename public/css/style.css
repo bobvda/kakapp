@@ -68,7 +68,9 @@ span.ol {
     font-weight: bolder;
     font-size: 15pt;
 }
-
+.leaflet-popup-content a{
+  color: #045453;
+}
 .fulllink {
     text-decoration: none;
     color: black;
