@@ -26,6 +26,7 @@ header h1 {
     line-height: 30px;
     height: 30px;
     font-family: Turret Road;
+    font-weight: 700;
     color: #FFFBF4;
     text-align: center;
     padding: .5em;
@@ -115,7 +116,7 @@ span.ol {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     font-size: 25px;
     line-height: 30px;
 }
