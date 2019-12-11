@@ -1,7 +1,7 @@
 #mapid {
     position: absolute;
     z-index: -1;
-    height: 89vh;
+    height: 85vh;
     width: 100vw;
 }
 
@@ -17,9 +17,8 @@ body {
 }
 
 header {
-    height: 100px;
+    height: 15vh;
     background-color: #045453;
-    position: sticky;
 }
 
 header h1 {
@@ -107,7 +106,7 @@ span.ol {
     color: #FFFBF4;
     position: absolute;
     right: 0;
-    top: 40px;
+    top: 50px;
     right: 10px;
     z-index: 2;
 }
@@ -197,6 +196,7 @@ h1 a {
 .button-group:after {
     content: '';
     display: block;
+    width: 100vw;
     clear: both;
 }
 
