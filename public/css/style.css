@@ -114,9 +114,9 @@ span.ol {
 
 .collapse {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     overflow: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     font-size: 25px;
     line-height: 30px;
 }
