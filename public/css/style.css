@@ -19,7 +19,7 @@ body {
 header {
     height: 15vh;
     background-color: #045453;
-}
+position: sticky;}
 
 header h1 {
     margin: 0;
@@ -113,21 +113,32 @@ span.ol {
 }
 
 .collapse {
+    margin-bottom: 0;
+    max-height:80vh;
+
     width: 100vw;
-    height: auto;
     overflow: hidden;
     overflow-y: scroll;
     font-size: 25px;
     line-height: 30px;
 }
 
+#content.collapse.show {
+    height:80vh;
+}
+
+.collapsing {
+    height:80vh;
+}
+
 .show {
-    height: 100vh;
+    max-height:80vh;
+
     position: absolute;
     right: 0;
     z-index: 1;
     background-color: white;
-    border-bottom: 10px solid #045453;
+    margin-bottom: 0;
 }
 
 section {
@@ -202,6 +213,7 @@ h1 a {
 }
 
 .button-group .button {
+
     height: 100px;
     float: left;
     border-radius: 0;
