@@ -11,7 +11,7 @@ function onLocationFound(e) {
     var radius = e.accuracy;
 
     L.marker(e.latlng).addTo(mymap)
-        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+        .bindPopup("U bevind zich binnen " + radius + " meter van dit punt").openPopup();
 
      L.circle(e.latlng, radius).addTo(mymap);
  }
@@ -44,7 +44,7 @@ L.Routing.control({
   ],
     lineOptions: {styles: [{color: '#9e1015'}]},
 
-    routeWhileDragging: true,
+    routeWhileDragging: true
 }).addTo(mymap);
 
 
