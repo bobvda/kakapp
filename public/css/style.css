@@ -5,7 +5,7 @@
     width: 100vw;
 }
 
-svg {
+.button-group svg {
   pointer-events: none;
   height: 100%;
   width: 100%;
@@ -236,10 +236,10 @@ background-color: transparent
 
 
 
-svg {
+.button-group svg {
   width: 70px;
   height: 70px;
 }
-svg:hover {
+.button-group svg:hover {
   fill: red;
 }
