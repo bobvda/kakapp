@@ -19,6 +19,7 @@ body {
 header {
     height: 100px;
     background-color: #045453;
+    position: sticky;
 }
 
 header h1 {
@@ -49,6 +50,9 @@ h2 {
 button{
   background-color: #045453;
   padding: 3%;
+
+
+
 }
 .detail {
     background-color: #DDDDDD;
