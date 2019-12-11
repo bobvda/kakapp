@@ -39,8 +39,8 @@ var basicmap = L.tileLayer('https://tile.thunderforest.com/mobile-atlas/{z}/{x}/
 
 L.Routing.control({
   waypoints: [
-    L.latLng(51.22011825214314, 4.426963935275779),
-    L.latLng(51.23011825214314, 4.426863935275779)
+    L.latLng(51.230221, 4.415621),
+    L.latLng(51.22720241356745, 4.422033349354602)
   ],
     lineOptions: {styles: [{color: '#9e1015'}]},
 
